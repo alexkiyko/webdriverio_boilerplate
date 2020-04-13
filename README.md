@@ -1,29 +1,32 @@
-##WebdriverIO WEB Testing Boilerplate
+## WebdriverIO WEB Testing Boilerplate
 
-###Frameworks:
+### Frameworks:
 * WebdriverIO (v6)
 * Mocha
 * Chai
 
-###Features:
+### Features:
 * ESLint
 * Babel
 * Axios
 * Allure Report
 
-###How to Start
+### How to Start
 
 Clone the project
 
-####Install
-
+#### Install
+```
 npm install
+```
 
-####Run Tests
-
+#### Run Tests
+```
 npm test
+```
 
-####Allure Report
-
-npm run report
+#### Allure Report
+```
+allure open
+```
 
