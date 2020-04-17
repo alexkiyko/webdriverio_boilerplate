@@ -4,19 +4,21 @@
   "description": "boilerplate",
   "main": "index.js",
   "scripts": {
-    "test": "./node_modules/.bin/wdio wdio.conf.js"
+    "test": "npm run clean && wdio wdio.conf.js && npm run report",
+    "report": "allure generate --clean && allure open",
+    "clean": "rm -rf allure-results"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": "Alexander Kiyko",
+  "license": "MIT",
   "devDependencies": {
     "@babel/cli": "^7.8.4",
     "@babel/core": "^7.9.0",
     "@babel/preset-env": "^7.9.0",
     "@babel/register": "^7.9.0",
     "@wdio/allure-reporter": "^6.0.14",
-    "@wdio/cli": "^6.0.5",
-    "@wdio/local-runner": "^6.0.5",
+    "@wdio/cli": "^6.0.16",
+    "@wdio/local-runner": "^6.0.16",
     "@wdio/mocha-framework": "^6.0.4",
     "@wdio/spec-reporter": "^6.0.4",
     "@wdio/sync": "^6.0.1",

@@ -1,7 +1,7 @@
 import { expect } from 'chai';
 import axios from 'axios';
 
-describe('webdriver.io', () => {
+describe('webdriver.io api', () => {
   it('should get success response',async () => {
     const response = await axios({
       method: 'get',

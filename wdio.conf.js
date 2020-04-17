@@ -7,6 +7,7 @@ exports.config = {
   // WebdriverIO allows it to run your tests in arbitrary locations (e.g. locally or
   // on a remote machine).
   runner: 'local',
+  port: 4444,
   //
   // ==================
   // Specify Test Files
@@ -127,7 +128,9 @@ exports.config = {
   reporters: ['spec', 'allure'],
   reporterOptions: {
     allure: {
-      outputDir: 'allure-results'
+      outputDir: 'allure-results',
+      disableWebdriverStepsReporting: true,
+      disableWebdriverScreenshotsReporting: false,
     }
   },
   //
@@ -214,10 +217,12 @@ exports.config = {
   /**
      * Function to be executed after a test (in Mocha/Jasmine).
      */
-  // afterTest: function(test, context, { error, result, duration, passed, retries }) {
-  // },
-
-
+  afterTest: function(test, context, { error, result, duration, passed, retries }) {
+    let date = 'ERROR-chrome-' + Date.now();
+    if (!passed) {
+      browser.saveScreenshot('./test/screenShots/' + date + '.png');
+    }
+  },
   /**
      * Hook that gets executed after the suite has ended
      * @param {Object} suite suite details
