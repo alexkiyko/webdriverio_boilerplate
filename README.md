@@ -27,6 +27,6 @@ npm test
 
 #### Allure Report
 ```
-allure open
+npm run report
 ```
 

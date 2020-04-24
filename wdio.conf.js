@@ -7,7 +7,7 @@ exports.config = {
   // WebdriverIO allows it to run your tests in arbitrary locations (e.g. locally or
   // on a remote machine).
   runner: 'local',
-  port: 4444,
+  // port: '/',
   //
   // ==================
   // Specify Test Files
@@ -66,7 +66,7 @@ exports.config = {
   // Define all options that are relevant for the WebdriverIO instance here
   //
   // Level of logging verbosity: trace | debug | info | warn | error | silent
-  logLevel: 'info',
+  logLevel: 'silent',
   //
   // Set specific log levels per logger
   // loggers:

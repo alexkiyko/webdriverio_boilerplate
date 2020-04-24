@@ -1,7 +1,6 @@
 .git
-.idea
 .idea/*
-node_modules/
-allure-report/
-allure-results/
-screenShots/
+node_modules
+allure-report
+allure-results
+screenShots
